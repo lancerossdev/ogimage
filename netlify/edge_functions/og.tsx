@@ -1,7 +1,7 @@
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
 
-export default function handler(req: Request) {
+export default async function handler(req: Request) {
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
   const title = params.get("title") ?? "Powered by Netlify Edge Functions";
