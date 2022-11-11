@@ -17,17 +17,7 @@ export default async function handler(req: Request) {
       <div tw="bg-zinc-900 flex flex-col w-full h-full">
         <div tw="flex flex-col w-full h-4/5 p-10 justify-center">
           <div tw="text-zinc-400 text-2xl mb-6">{date}</div>
-          <div
-            style={{
-              backgroundImage: "linear-gradient(90deg, #4ade80, #3b82f6, #a855f7)",
-              backgroundClip: "text",
-              // @ts-ignore: necessary for clipping
-              "-webkit-background-clip": "text",
-            }}
-            tw="flex text-6xl w-full font-bold text-transparent leading-snug tracking-tight"
-          >
-            {title}
-          </div>
+          <div tw="flex text-6xl w-full font-bold text-white leading-snug tracking-tight">{title}</div>
         </div>
         <div tw="w-full h-1/5 border-t border-zinc-700/50 flex p-10 items-center justify-between text-2xl">
           <div tw="flex items-center">
@@ -35,7 +25,7 @@ export default async function handler(req: Request) {
             <span tw="ml-3 text-zinc-400">lanceross.xyz</span>
           </div>
           <div tw="flex items-center">
-            <img src="https://avatars.githubusercontent.com/u/46791833?s=80" tw="w-15 h-15 rounded-full" />
+            <img src="https://avatars.githubusercontent.com/u/102563271" tw="w-15 h-15 rounded-full" />
             <div tw="flex flex-col ml-3">
               <span tw="text-zinc-400">Lance Ross</span>
               <span tw="text-blue-400 font-base">@lancerossdev</span>

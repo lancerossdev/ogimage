@@ -1,45 +1,16 @@
-# Astro Starter Kit: Minimal
+# Netlify OG Generator Edge ⚡
 
-```
-npm create astro@latest -- --template minimal
-```
+As the title says, this is a Netlify Edge Function that generates Open Graph images for your blog posts. It uses Deno as runtime and Netlify to deploy it as edge functions. It's an inspiration from Matt Kane's [`og-edge`](https://github.com/ascorbic/og-edge) and Kevin Zuniga's [website](https://www.kevinzunigacuellar.com/) which uses OG Image Generator on Edge.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+This works on Netlify's Edge Functions, which means it's blazing fast and free. You can also use [Cloudflare Workers](https://workers.cloudflare.com) and [Vercel Edge](https://vercel.com) for this.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Dev Notes 📝
+You don't have to build the website made with Astro, I just want to have it so I can have a really cool webpage for the project.
 
-## 🚀 Project Structure
+`netlify dev` - Run the project locally
 
-Inside of your Astro project, you'll see the following folders and files:
+`netlify deploy` - Deploy the project to Netlify
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## License 📜
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This repository has [MIT License](https://github.com/lancerossdev/og-edge-netlify/blob/master/LICENSE).
