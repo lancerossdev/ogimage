@@ -3,4 +3,4 @@ publish = "dist"
 
 [[edge_functions]]
   function = "og"
-  path = "/og"
+  path = "/og/site"

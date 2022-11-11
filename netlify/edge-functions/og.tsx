@@ -1,7 +1,7 @@
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
 
-export default async function handler(req: Request) {
+export default function handler(req: Request) {
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
   const title = params.get("title") ?? "Powered by Netlify Edge Functions";
@@ -9,8 +9,8 @@ export default async function handler(req: Request) {
   const date = new Date(pubDate).toLocaleDateString("en-US", {
     dateStyle: "long",
   });
-  const InterBold = await fetch("https://fonts.cdnfonts.com/s/19795/Inter-Bold.woff").then((res) => res.arrayBuffer());
-  const InterRegular = await fetch("https://fonts.cdnfonts.com/s/19795/Inter-Regular.woff").then((res) => res.arrayBuffer());
+  const InterBold = fetch("https://fonts.cdnfonts.com/s/19795/Inter-Bold.woff").then((res) => res.arrayBuffer());
+  const InterRegular = fetch("https://fonts.cdnfonts.com/s/19795/Inter-Regular.woff").then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
