@@ -3,12 +3,8 @@ import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
 
 export default function handler(req: Request) {
   const url = new URL(req.url);
-  const params = new URLSearchParams(url.search);
-  const title = params.get("title") ?? "Powered by Netlify Edge Functions";
-  const pubDate = params.get("pubDate") ?? new Date().toISOString();
-  const date = new Date(pubDate).toLocaleDateString("en-US", {
-    dateStyle: "long",
-  });
+  const { searchParams } = new URL(req.url);
+  const title = searchParams.get("title");
   const InterBold = fetch("https://fonts.cdnfonts.com/s/19795/Inter-Bold.woff").then((res) => res.arrayBuffer());
   const InterRegular = fetch("https://fonts.cdnfonts.com/s/19795/Inter-Regular.woff").then((res) => res.arrayBuffer());
 
@@ -16,7 +12,6 @@ export default function handler(req: Request) {
     (
       <div tw="bg-zinc-900 flex flex-col w-full h-full">
         <div tw="flex flex-col w-full h-4/5 p-10 justify-center">
-          <div tw="text-zinc-400 text-2xl mb-6">{date}</div>
           <div tw="flex text-6xl w-full font-bold text-white leading-snug tracking-tight">{title}</div>
         </div>
         <div tw="w-full h-1/5 border-t border-zinc-700/50 flex p-10 items-center justify-between text-2xl">
