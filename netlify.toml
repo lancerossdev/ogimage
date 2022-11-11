@@ -1,5 +1,5 @@
 [build]
-publish = "demo"
+publish = "dist"
 
 [[edge_functions]]
   function = "og"
