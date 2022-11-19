@@ -1,5 +1,6 @@
 [build]
-publish = "dist"
+  publish = "docs/.vitepress/dist"
+  command = "pnpm run build"
 
 [[edge_functions]]
   function = "og"

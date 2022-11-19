@@ -1,17 +1,14 @@
 {
-  "name": "astro-og-netlify",
+  "name": "og-edge-netlify",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro build && astro preview",
-    "astro": "astro"
+    "docs:dev": "vitepress dev docs --port 3000",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
-  "dependencies": {
-    "@astrojs/tailwind": "^2.1.2",
-    "astro": "^1.6.0",
-    "tailwindcss": "^3.2.3",
-    "astro-icon": "^0.8.0"
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.29",
+    "vue": "^3.2.45"
   }
 }

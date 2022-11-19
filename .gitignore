@@ -20,7 +20,6 @@ pnpm-debug.log*
 
 # package manager lock files
 yarn.lock
-package-lock.json
 pnpm-lock.yaml
 
 # Local Netlify folder
